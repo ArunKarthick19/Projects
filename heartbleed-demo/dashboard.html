@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard – SecureBank</title>
+    <style>
+        body { font-family: sans-serif; background: #f0f2f5; padding: 20px; }
+        .container { max-width: 800px; margin: auto; background: white; border-radius: 20px; padding: 30px; }
+        .balance { font-size: 48px; color: #2c7a4d; margin: 20px 0; }
+        button { background: #2c5a7a; color: white; border: none; padding: 10px 20px; border-radius: 40px; cursor: pointer; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>SecureBank Dashboard</h1>
+    <p>Welcome, <span id="username"></span></p>
+    <div class="balance">$<span id="balance">---</span></div>
+    <button onclick="logout()">Logout</button>
+</div>
+<script>
+    const username = localStorage.getItem('username');
+    if (!username) window.location.href = '/';
+    document.getElementById('username').innerText = username;
+    async function loadBalance() {
+        const res = await fetch('/backend.php?action=get_balance');
+        const data = await res.json();
+        if (data.success) document.getElementById('balance').innerText = data.balance;
+    }
+    loadBalance();
+    function logout() { localStorage.clear(); window.location.href = '/'; }
+</script>
+</body>
+</html>
