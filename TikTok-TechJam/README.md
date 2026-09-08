@@ -3,6 +3,15 @@
 TikTok TechJam 2026 — Track 5 submission. - https://colab.research.google.com/drive/1XPmWzmo0NxsS_JS42e9E3Y0bXB-zs1Me?usp=sharing
 video link - https://www.youtube.com/watch?v=lG4teLjOIDk
 
+
+### Contributors
+
+Built by [Arun Karthick](https://github.com/ArunKarthick19), [wjw55](https://github.com/wjw55), and [Derekqua](https://github.com/Derekqua) for TikTok TechJam 2026.
+
+### Links
+
+- 🔗 [View on Devpost](https://devpost.com/software/trueframe-robust-ai-image-detection#updates)
+
 ## Project Overview
 
 This project detects whether an image is real or AI-generated, with a specific
